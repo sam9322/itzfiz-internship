@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W E L C O M E I T Z F I Z Z</title>
+    <!-- Tailwind CSS (CDN for standalone usage) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-zinc-950 text-white overflow-x-hidden font-['Outfit']">
+
+    <!-- Hero Section / Pin Container -->
+    <div id="hero-pin"
+        class="relative w-full h-screen overflow-hidden bg-zinc-950 flex flex-col justify-center items-center">
+
+        <!-- Track Background behind the road -->
+        <div
+            class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-zinc-800 via-zinc-950 to-zinc-950 opacity-40">
+        </div>
+
+        <!-- The Dark Road area -->
+        <!-- It occupies the middle section of the screen -->
+        <div
+            class="road-container absolute top-1/2 left-0 w-full h-[25vh] md:h-[35vh] -translate-y-1/2 bg-zinc-900 border-y border-zinc-800 shadow-[inset_0_10px_30px_rgba(0,0,0,0.5)] flex items-center justify-center overflow-hidden z-10">
+
+            <!-- Green Trail that paints as we scroll -->
+            <div
+                class="green-trail absolute left-0 top-0 h-full w-0 bg-emerald-500/90 shadow-[0_0_50px_rgba(16,185,129,1)] z-0 mix-blend-screen origin-left">
+            </div>
+
+            <!-- Stenciled Letters inside road -->
+            <div
+                class="headline-container relative z-10 flex items-center justify-center gap-1 sm:gap-2 lg:gap-3 text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-zinc-100 uppercase pointer-events-none drop-shadow-[0_0_15px_rgba(255,255,255,0.2)] whitespace-nowrap">
+                <!-- Using spans for each letter so they can pop in -->
+                <span class="letter opacity-0">W</span>
+                <span class="letter opacity-0">E</span>
+                <span class="letter opacity-0">L</span>
+                <span class="letter opacity-0">C</span>
+                <span class="letter opacity-0">O</span>
+                <span class="letter opacity-0">M</span>
+                <span class="letter opacity-0">E</span>
+                <span class="w-3 sm:w-6 md:w-8"></span> <!-- space -->
+                <span class="letter opacity-0">I</span>
+                <span class="letter opacity-0">T</span>
+                <span class="letter opacity-0">Z</span>
+                <span class="letter opacity-0">F</span>
+                <span class="letter opacity-0">I</span>
+                <span class="letter opacity-0">Z</span>
+                <span class="letter opacity-0">Z</span>
+            </div>
+
+        </div>
+
+        <!-- The Car Image -->
+        <!-- Positioned vertically inside the road -->
+        <!-- Starts parked completely on the left edge of the screen -->
+        <div
+            class="car-container absolute top-1/2 left-0 -translate-y-1/2 h-[25vh] md:h-[35vh] z-30 pointer-events-none flex items-center justify-start">
+            <!-- Glare effect on the car's nose -->
+            <div
+                class="absolute top-1/2 right-0 -translate-y-1/2 w-[15vh] h-[25vh] md:h-[35vh] bg-emerald-400/30 blur-2xl rounded-full animate-pulse-glow">
+            </div>
+            <img src="car.png" alt="Sleek Sports Car"
+                class="relative z-10 h-full w-auto object-contain max-w-none mix-blend-multiply">
+        </div>
+
+        <!-- Impact Metrics / Statistics -->
+        <!-- Positioned above AND below the road -->
+
+        <div
+            class="stat-card absolute top-[10%] md:top-[12%] left-[5%] md:left-[10%] opacity-0 translate-y-8 flex flex-col max-w-[150px] md:max-w-[220px]">
+            <div class="hover:-translate-y-2 hover:scale-105 transition-all duration-300 ease-out cursor-default">
+                <span
+                    class="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-amber-200 via-yellow-400 to-amber-200 animate-gradient-x">58%</span>
+                <span
+                    class="text-[10px] md:text-xs uppercase tracking-widest text-zinc-400 mt-2 leading-relaxed block">Increase
+                    in pick up point use</span>
+            </div>
+        </div>
+
+        <div
+            class="stat-card absolute top-[12%] md:top-[15%] right-[5%] md:right-[10%] opacity-0 translate-y-8 flex flex-col max-w-[150px] md:max-w-[220px] text-right items-end">
+            <div
+                class="hover:-translate-y-2 hover:scale-105 transition-all duration-300 ease-out cursor-default flex flex-col items-end">
+                <span
+                    class="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-zinc-300 via-white to-zinc-300 animate-gradient-x">27%</span>
+                <span
+                    class="text-[10px] md:text-xs uppercase tracking-widest text-zinc-400 mt-2 leading-relaxed block">Increase
+                    in online reservations</span>
+            </div>
+        </div>
+
+        <div
+            class="stat-card absolute bottom-[10%] md:bottom-[12%] left-[5%] md:left-[15%] opacity-0 -translate-y-8 flex flex-col max-w-[150px] md:max-w-[220px]">
+            <div class="hover:-translate-y-2 hover:scale-105 transition-all duration-300 ease-out cursor-default">
+                <span
+                    class="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 via-blue-400 to-cyan-300 animate-gradient-x">23%</span>
+                <span
+                    class="text-[10px] md:text-xs uppercase tracking-widest text-zinc-400 mt-2 leading-relaxed block">Decreased
+                    in customer phone calls</span>
+            </div>
+        </div>
+
+        <div
+            class="stat-card absolute bottom-[8%] md:bottom-[10%] right-[5%] md:right-[15%] opacity-0 -translate-y-8 flex flex-col max-w-[150px] md:max-w-[220px] text-right items-end">
+            <div
+                class="hover:-translate-y-2 hover:scale-105 transition-all duration-300 ease-out cursor-default flex flex-col items-end">
+                <span
+                    class="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-orange-400 via-red-500 to-orange-400 animate-gradient-x">40%</span>
+                <span
+                    class="text-[10px] md:text-xs uppercase tracking-widest text-zinc-400 mt-2 leading-relaxed block">Boost
+                    in
+                    overall efficiency</span>
+            </div>
+        </div>
+
+        <!-- Scroll visual indicator -->
+        <div
+            class="scroll-indicator absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center opacity-0 translate-y-4">
+            <div class="animate-bounce flex flex-col items-center">
+                <span class="text-[10px] uppercase tracking-[0.3em] text-emerald-400 mb-2">Scroll To Drive</span>
+                <div class="w-[1px] h-12 bg-gradient-to-b from-emerald-500 to-transparent"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Extra Space to trigger scroll animation -->
+    <!-- The length controls the apparent 'speed' of scroll scrubbing -->
+    <div id="scroll-space" class="w-full h-[300vh]"></div>
+
+    <!-- Subsequent Section -->
+    <section class="h-screen bg-zinc-950 flex flex-col items-center justify-center border-t border-zinc-900 relative">
+        <div
+            class="absolute inset-0 bg-[radial-gradient(circle_at_bottom,_var(--tw-gradient-stops))] from-zinc-800 via-zinc-950 to-zinc-950 opacity-30">
+        </div>
+        <h2 class="text-3xl md:text-5xl text-zinc-400 font-light tracking-widest z-10">End of Journey</h2>
+        <p class="text-zinc-600 mt-4 tracking-wider text-sm z-10 uppercase">Animation Completed</p>
+    </section>
+
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>

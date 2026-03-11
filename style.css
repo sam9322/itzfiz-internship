@@ -1,0 +1,59 @@
+
+
+/* Custom Animations */
+.animate-pulse-glow {
+    animation: pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+.animate-gradient-x {
+    animation: gradient-x 3s ease infinite;
+}
+
+@keyframes pulse-glow {
+    0%, 100% { opacity: 1; filter: brightness(1) blur(24px); }
+    50% { opacity: 0.6; filter: brightness(1.5) blur(32px); }
+}
+
+@keyframes gradient-x {
+    0%, 100% { background-size: 200% 200%; background-position: left center; }
+    50% { background-size: 200% 200%; background-position: right center; }
+}
+
+/* Custom CSS overrides or additions over Tailwind */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* Hide scrollbar for a cleaner look */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+}
+
+/* Ensure font smooth rendering */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Base states for animations */
+.stat-card {
+    will-change: transform, opacity;
+}
+
+.car-container {
+    will-change: transform;
+}
+
+.green-trail {
+    will-change: width;
+}
+
+.letter {
+    display: inline-block;
+    will-change: opacity, transform, color;
+}
