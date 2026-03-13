@@ -5,7 +5,59 @@ document.addEventListener("DOMContentLoaded", () => {
     // Initialize animations cleanly
     initHeroLoadAnimation();
     initCarScrollAnimation();
+    initMouseEffects();
+    initParticles();
 });
+
+/**
+ * Enhanced Mouse Spotlight Interaction
+ */
+function initMouseEffects() {
+    const spotlight = document.querySelector('.mouse-spotlight');
+    window.addEventListener('mousemove', (e) => {
+        const { clientX, clientY } = e;
+        gsap.to(spotlight, {
+            '--x': `${clientX}px`,
+            '--y': `${clientY}px`,
+            duration: 0.1,
+            ease: "none"
+        });
+    });
+}
+
+/**
+ * Subtle Ambient Particle System
+ */
+function initParticles() {
+    const container = document.getElementById('particles-container');
+    const count = 30;
+    
+    for (let i = 0; i < count; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        
+        const size = Math.random() * 4 + 2;
+        gsap.set(particle, {
+            width: size,
+            height: size,
+            left: `${Math.random() * 100}%`,
+            top: `${Math.random() * 100}%`,
+            opacity: Math.random() * 0.4 + 0.1,
+        });
+        
+        container.appendChild(particle);
+        
+        // Floating animation
+        gsap.to(particle, {
+            x: `random(-100, 100)`,
+            y: `random(-100, 100)`,
+            duration: `random(10, 20)`,
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut"
+        });
+    }
+}
 
 /**
  * Handles the initial entry animations when the page first loads.
