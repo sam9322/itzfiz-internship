@@ -18,6 +18,34 @@
     50% { background-size: 200% 200%; background-position: right center; }
 }
 
+@keyframes float {
+    0%, 100% { transform: translateY(0) translateX(0); }
+    33% { transform: translateY(-10px) translateX(5px); }
+    66% { transform: translateY(5px) translateX(-5px); }
+}
+
+.mouse-spotlight {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 50;
+    background: radial-gradient(600px circle at var(--x) var(--y), rgba(16, 185, 129, 0.08), transparent 40%);
+
+}
+
+.particle {
+    position: absolute;
+    background:	#CF9FFF;
+    width: 8px;
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0.3;
+    filter: blur(1px);
+}
+
 /* Custom CSS overrides or additions over Tailwind */
 
 html {
@@ -51,9 +79,60 @@ body {
 
 .green-trail {
     will-change: width;
+    
+}
+
+.tire-tracks {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    transform: translateY(-50%);
+    background: linear-gradient(
+        to bottom,
+        transparent,
+         rgba(0, 0, 0, 0.2) 20%,
+        rgba(0, 0, 0, 0.2) 30%,
+        transparent 40%,
+        transparent 60%,
+        rgba(0, 0, 0, 0.2) 70%,
+        rgba(0, 0, 0, 0.2) 80%,
+        transparent
+    );
+    filter: blur(8px);
+    z-index: 0;
+    pointer-events: none;
 }
 
 .letter {
     display: inline-block;
     will-change: opacity, transform, color;
 }
+
+.glass-morphism {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.glow-text {
+    text-shadow: 0 0 10px rgba(, 185, 129, 0.5);
+}
+
+.floating {
+    animation: float 6s ease-in-out infinite;
+}
+
+.headline-container {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #3d987a;
+    text-shadow: 0 0 20px rgba(98, 16, 185, 0.5);
+    animation-name: initial-fade-in;
+
+}
+
+
+
