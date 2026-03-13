@@ -12,6 +12,11 @@
 </head>
 
 <body class="bg-zinc-950 text-white overflow-x-hidden font-['Outfit']">
+    <!-- Mouse Spotlight -->
+    <div class="mouse-spotlight"></div>
+
+    <!-- Particles Background -->
+    <div id="particles-container" class="fixed inset-0 pointer-events-none z-0"></div>
 
     <!-- Hero Section / Pin Container -->
     <div id="hero-pin"
@@ -25,11 +30,15 @@
         <!-- The Dark Road area -->
         <!-- It occupies the middle section of the screen -->
         <div
-            class="road-container absolute top-1/2 left-0 w-full h-[25vh] md:h-[35vh] -translate-y-1/2 bg-zinc-900 border-y border-zinc-800 shadow-[inset_0_10px_30px_rgba(0,0,0,0.5)] flex items-center justify-center overflow-hidden z-10">
+            class="road-container absolute top-1/2 left-0 w-full h-[25vh] md:h-[35vh] -translate-y-1/2 bg-[#0a0a0c] border-y border-[#1a1a1f] shadow-[inset_0_20px_40px_rgba(0,0,0,0.8)] flex items-center justify-center overflow-hidden z-10">
+
+            <!-- Realistic Road Elements -->
+
+
 
             <!-- Green Trail that paints as we scroll -->
             <div
-                class="green-trail absolute left-0 top-0 h-full w-0 bg-emerald-500/90 shadow-[0_0_50px_rgba(16,185,129,1)] z-0 mix-blend-screen origin-left">
+                class="green-trail.absolute.left-0.top-0.h-full.w-0.bg-emerald-500\/90.shadow-\[0_0_50px_rgba\(16\,185\,129\,1\)\].z-0.mix-blend-screen.origin-left">
             </div>
 
             <!-- Stenciled Letters inside road -->
@@ -60,19 +69,15 @@
         <!-- Starts parked completely on the left edge of the screen -->
         <div
             class="car-container absolute top-1/2 left-0 -translate-y-1/2 h-[25vh] md:h-[35vh] z-30 pointer-events-none flex items-center justify-start">
-            <!-- Glare effect on the car's nose -->
-            <div
-                class="absolute top-1/2 right-0 -translate-y-1/2 w-[15vh] h-[25vh] md:h-[35vh] bg-emerald-400/30 blur-2xl rounded-full animate-pulse-glow">
-            </div>
             <img src="car.png" alt="Sleek Sports Car"
-                class="relative z-10 h-full w-auto object-contain max-w-none mix-blend-multiply">
+                class="relative z-10 h-full w-auto object-contain max-w-none mix-blend-multiply brightness-125">
         </div>
 
         <!-- Impact Metrics / Statistics -->
         <!-- Positioned above AND below the road -->
 
         <div
-            class="stat-card absolute top-[10%] md:top-[12%] left-[5%] md:left-[10%] opacity-0 translate-y-8 flex flex-col max-w-[150px] md:max-w-[220px]">
+            class="stat-card glass-morphism p-4 rounded-2xl absolute top-[10%] md:top-[12%] left-[5%] md:left-[10%] opacity-0 translate-y-8 flex flex-col max-w-[150px] md:max-w-[220px]">
             <div class="hover:-translate-y-2 hover:scale-105 transition-all duration-300 ease-out cursor-default">
                 <span
                     class="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-amber-200 via-yellow-400 to-amber-200 animate-gradient-x">58%</span>
@@ -83,7 +88,7 @@
         </div>
 
         <div
-            class="stat-card absolute top-[12%] md:top-[15%] right-[5%] md:right-[10%] opacity-0 translate-y-8 flex flex-col max-w-[150px] md:max-w-[220px] text-right items-end">
+            class="stat-card glass-morphism p-4 rounded-2xl absolute top-[12%] md:top-[15%] right-[5%] md:right-[10%] opacity-0 translate-y-8 flex flex-col max-w-[150px] md:max-w-[220px] text-right items-end">
             <div
                 class="hover:-translate-y-2 hover:scale-105 transition-all duration-300 ease-out cursor-default flex flex-col items-end">
                 <span
@@ -95,7 +100,7 @@
         </div>
 
         <div
-            class="stat-card absolute bottom-[10%] md:bottom-[12%] left-[5%] md:left-[15%] opacity-0 -translate-y-8 flex flex-col max-w-[150px] md:max-w-[220px]">
+            class="stat-card glass-morphism p-4 rounded-2xl absolute bottom-[10%] md:bottom-[12%] left-[5%] md:left-[15%] opacity-0 -translate-y-8 flex flex-col max-w-[150px] md:max-w-[220px]">
             <div class="hover:-translate-y-2 hover:scale-105 transition-all duration-300 ease-out cursor-default">
                 <span
                     class="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 via-blue-400 to-cyan-300 animate-gradient-x">23%</span>
@@ -106,7 +111,7 @@
         </div>
 
         <div
-            class="stat-card absolute bottom-[8%] md:bottom-[10%] right-[5%] md:right-[15%] opacity-0 -translate-y-8 flex flex-col max-w-[150px] md:max-w-[220px] text-right items-end">
+            class="stat-card glass-morphism p-4 rounded-2xl absolute bottom-[8%] md:bottom-[10%] right-[5%] md:right-[15%] opacity-0 -translate-y-8 flex flex-col max-w-[150px] md:max-w-[220px] text-right items-end">
             <div
                 class="hover:-translate-y-2 hover:scale-105 transition-all duration-300 ease-out cursor-default flex flex-col items-end">
                 <span
